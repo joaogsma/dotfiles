@@ -10,9 +10,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'preservim/nerdtree'
 Plug 'gruvbox-community/gruvbox'
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'joaogsma/vimrc'
 
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
@@ -144,3 +145,7 @@ set listchars+=precedes:<,extends:>
 " Add a grey line to the 100th column
 highlight ColorColumn ctermbg=grey
 set colorcolumn=100
+
+" Remaps n and N to the highlighting version from the hlnext plugin
+nnoremap  <silent><expr> n  'Nn'[v:searchforward] . ":call HLNext()\<CR>"
+nnoremap  <silent><expr> N  'nN'[v:searchforward] . ":call HLNext()\<CR>"
