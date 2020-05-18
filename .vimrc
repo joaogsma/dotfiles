@@ -140,3 +140,7 @@ set foldlevelstart=99
 set nowrap
 set sidescroll=5
 set listchars+=precedes:<,extends:>
+
+" Add a grey line to the 100th column
+highlight ColorColumn ctermbg=grey
+set colorcolumn=100
