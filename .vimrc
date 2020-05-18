@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 " Gruvbox and YouCompleteMe need to be installed beforehand:
 "   - https://github.com/morhetz/gruvbox
 "   - https://github.com/ycm-core/YouCompleteMe
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'preservim/nerdtree'
 Plug 'gruvbox-community/gruvbox'
 Plug 'pangloss/vim-javascript'
