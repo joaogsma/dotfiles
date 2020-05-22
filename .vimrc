@@ -13,7 +13,6 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'joaogsma/vimrc'
 
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
@@ -104,6 +103,7 @@ set list listchars=tab:>-,trail:•,extends:+,eol:¬ " Display different types o
 set ls=2 " Enable status bar
 set ru " Enable the ruler
 set mouse=a " Enable the mouse
+set ttymouse=xterm2 " Fixes mouse in tmux
 
 " Makes backspace work as expected
 map <BS> X
@@ -146,6 +146,5 @@ set listchars+=precedes:<,extends:>
 highlight ColorColumn ctermbg=grey
 set colorcolumn=100
 
-" Remaps n and N to the highlighting version from the hlnext plugin
-nnoremap  <silent><expr> n  'Nn'[v:searchforward] . ":call HLNext()\<CR>"
-nnoremap  <silent><expr> N  'nN'[v:searchforward] . ":call HLNext()\<CR>"
+" Maps jj to Esc in insert mode
+inoremap jj <ESC>
