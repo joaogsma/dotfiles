@@ -108,9 +108,9 @@ window:
 
 font:
   normal:
-    family: Fira Code
-    style: Medium
+    family: Hack
   size: 15.0
+
 
   # Bold font face
   #bold:
