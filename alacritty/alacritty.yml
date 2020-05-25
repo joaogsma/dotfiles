@@ -110,7 +110,7 @@ font:
   normal:
     family: Input Mono
     style: Regular
-  size: 15.0
+  size: 13
 
 
   # Bold font face
