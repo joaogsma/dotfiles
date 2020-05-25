@@ -108,7 +108,8 @@ window:
 
 font:
   normal:
-    family: Hack
+    family: Input Mono
+    style: Regular
   size: 15.0
 
 
