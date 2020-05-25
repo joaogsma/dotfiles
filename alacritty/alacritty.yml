@@ -65,6 +65,9 @@ env:
   #startup_mode: Windowed
 window:
   startup_mode: Fullscreen
+  padding:
+    x: 5
+    y: 5
 
   # Window title
   #title: Alacritty
