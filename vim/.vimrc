@@ -142,6 +142,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap rn <Plug>(coc-rename)
+" File renaming. Needs watchman installed: sudo apt install watchman
+nmap rnf :CocCommand workspace.renameCurrentFile<CR>
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
