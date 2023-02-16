@@ -32,6 +32,10 @@ let g:airline#extensions#coc#enabled = 1
 " /////////////////////////////////////////////////////////////////////////////////////////////////
 " // Clipboard configurations
 " /////////////////////////////////////////////////////////////////////////////////////////////////
+if has("nvim")
+  set clipboard+=unnamedplus
+endif
+
 if has("clipboard")
   set clipboard=unnamed " copy to the system clipboard
 
@@ -121,6 +125,11 @@ endfunction
 " Use Ctrl+Space to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -175,7 +184,9 @@ set list listchars=tab:>-,trail:•,extends:+,eol:¬ " Display different types o
 set ls=2 " Enable status bar
 set ru " Enable the ruler
 set mouse=a " Enable the mouse
-set ttymouse=xterm2 " Fixes mouse in tmux
+if !has('nvim')
+  set ttymouse=xterm2 " Fixes mouse in tmux
+endif
 
 " Makes backspace work as expected
 map <BS> X
