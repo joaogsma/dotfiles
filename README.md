@@ -11,3 +11,7 @@ xterm-256color-italic|xterm with 256 colors and italic,
 ```
 $ tic xterm-256color-italic.terminfo
 ```
+
+
+
+
